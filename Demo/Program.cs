@@ -9,6 +9,8 @@ namespace Demo
 {
     internal class Program
     {
+        #region Methods
+
         //public static void ProcessEmployee(Employee employee)
         //{
         //    if (employee is not null)
@@ -39,6 +41,7 @@ namespace Demo
             else
                 return;
         }
+        #endregion
         static void Main(string[] args)
         {
             #region Binding
