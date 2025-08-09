@@ -1,5 +1,7 @@
 ﻿using Demo.Binding;
+using Demo.Interface;
 using Demo.Overriding;
+using Type = Demo.Interface.Type;
 
 namespace Demo
 {
@@ -93,7 +95,7 @@ namespace Demo
             //TypeC typeC = new TypeE(1, 2, 3, 4, 5);
             //TypeD typeD = new TypeE(1, 2, 3, 4, 5);
 
-   
+
             //typeA.MyFun02();
 
 
@@ -102,14 +104,23 @@ namespace Demo
 
             //typeC.MyFun02();
 
-   
+
             //typeD.MyFun02();
 
             #endregion
 
             #endregion
 
+            #region Interface
+            //IType type = new Type();
+            //type.MyProperty = 5;
+            //type.MyMethod();
+            //type.Print();
 
+            Type type = new Type();
+            type.MyProperty = 10;
+            type.MyMethod();
+            #endregion
         }
     }
 }
