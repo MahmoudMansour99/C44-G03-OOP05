@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Demo.Interface
 {
-    internal class TypeC
+    internal class Vehicle
     {
-        public int Current { get; set; }
-
-        public void GetNext()
-        {
-            Current += 5;
-        }
+        public int Speed { get; set; }
     }
 }
-

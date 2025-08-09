@@ -9,14 +9,14 @@ namespace Demo
 {
     internal class Program
     {
-        public static void ProcessEmployee(Employee employee)
-        {
-            if (employee is not null)
-            {
-                employee.GetEmployeeType();
-                employee.GetEmployeeData();
-            }
-        }
+        //public static void ProcessEmployee(Employee employee)
+        //{
+        //    if (employee is not null)
+        //    {
+        //        employee.GetEmployeeType();
+        //        employee.GetEmployeeData();
+        //    }
+        //}
         //public static void ProcessEmployee(PartTimeEmployee employee)
         //{
         //    if (employee is not null)
@@ -141,11 +141,33 @@ namespace Demo
             #endregion
 
             #region Example 01
-            TypeA typeA = new TypeA();
-            PrintFiveNumbersFromSeries(typeA);
+            //TypeA typeA = new TypeA();
+            //PrintFiveNumbersFromSeries(typeA);
 
-            TypeB typeB = new TypeB();
-            PrintFiveNumbersFromSeries(typeB);
+            //TypeB typeB = new TypeB();
+            //PrintFiveNumbersFromSeries(typeB);
+
+            #endregion
+
+            #region Example 02
+
+            Car car = new Car();
+            car.Backward();
+            car.Forward();
+            car.Right();
+            car.Left();
+
+            IMoveOnGround airplaneOnGround = new Airplane();
+            airplaneOnGround.Backward();
+            airplaneOnGround.Forward();
+            airplaneOnGround.Right();
+            airplaneOnGround.Left();
+
+            IMoveOnAir airplaneOnAir = new Airplane();
+            airplaneOnAir.Backward();
+            airplaneOnAir.Forward();
+            airplaneOnAir.Right();
+            airplaneOnAir.Left();
 
             #endregion
 

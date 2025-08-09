@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Demo.Interface
 {
-    internal class TypeC
+    internal interface IMoveOnAir
     {
-        public int Current { get; set; }
-
-        public void GetNext()
-        {
-            Current += 5;
-        }
+        public void Backward();
+        public void Forward();
+        public void Right();
+        public void Left();
     }
 }
-
