@@ -2,6 +2,8 @@
 using Demo.Interface;
 using Demo.Overriding;
 using Type = Demo.Interface.Type;
+using TypeA = Demo.Interface.TypeA;
+using TypeB = Demo.Interface.TypeB;
 
 namespace Demo
 {
@@ -23,6 +25,20 @@ namespace Demo
         //        employee.GetEmployeeData();
         //    }
         //}
+        static void PrintFiveNumbersFromSeries(ISeries series)
+        {
+            if (series is not null)
+            {
+                for (int i = 0; i <= 5; i++)
+                {
+                    Console.WriteLine(series.Current);
+                    series.GetNext();
+                }
+                series.Reset();
+            }
+            else
+                return;
+        }
         static void Main(string[] args)
         {
             #region Binding
@@ -112,14 +128,27 @@ namespace Demo
             #endregion
 
             #region Interface
+
+            #region Basics
             //IType type = new Type();
             //type.MyProperty = 5;
             //type.MyMethod();
             //type.Print();
 
-            Type type = new Type();
-            type.MyProperty = 10;
-            type.MyMethod();
+            //Type type = new Type();
+            //type.MyProperty = 10;
+            //type.MyMethod();
+            #endregion
+
+            #region Example 01
+            TypeA typeA = new TypeA();
+            PrintFiveNumbersFromSeries(typeA);
+
+            TypeB typeB = new TypeB();
+            PrintFiveNumbersFromSeries(typeB);
+
+            #endregion
+
             #endregion
         }
     }
